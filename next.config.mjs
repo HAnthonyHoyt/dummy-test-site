@@ -4,10 +4,14 @@
  */
 await import("./src/env.mjs");
 
+const isProd = process.env.NODE_ENV === 'production';
+
+
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
-  output: 'export'
+  output: 'export',
+  basePath: isProd ? '/dummy-test-site' : undefined
 };
 
 export default config;
