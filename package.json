@@ -2,11 +2,14 @@
   "name": "dummy-test-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://hanthonyhoyt.github.io/dummy-test-site",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.7.0",
@@ -24,6 +27,7 @@
     "@typescript-eslint/parser": "^6.3.0",
     "eslint": "^8.47.0",
     "eslint-config-next": "^13.5.4",
+    "gh-pages": "^6.0.0",
     "typescript": "^5.1.6"
   },
   "ct3aMetadata": {
